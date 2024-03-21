@@ -141,6 +141,7 @@ a {
 }
 
 .contents p {
+    font-weight: 600;
     opacity: 0;
     width: 100%;
     transition: all 1s ease;
@@ -155,8 +156,6 @@ a {
     transition: all 1s ease;
 }
 
-
-
 #announcement:checked+.envelope .top-side {
     transform: rotate(0deg);
     z-index: 3;
@@ -168,9 +167,9 @@ a {
     z-index: 3;
 }
 
-#announcement:checked~.contents {
+#announcement:checked+.envelope .contents {
     translate: 0 -2em;
-    transition: all 1s ease;
+    transition: all 1s 1s ease;
 }
 
 .details {
