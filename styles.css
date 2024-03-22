@@ -149,7 +149,7 @@ li {
 }
 
 .photos {
-    margin: 2em;
+    margin: 2em 2em 30vh 2em;
     display: flex;
     flex-direction: column;
     transition: all 1s 2s ease;
