@@ -160,11 +160,13 @@ li {
 }
 
 #announcement:checked~.photos>img {
+    opacity: 100;
     visibility: visible;
     transition: all 1s 3s ease;
 }
 
 .photos>img {
+    opacity: 0;
     visibility: hidden;
     object-fit: contain;
     max-width: 40vw;
