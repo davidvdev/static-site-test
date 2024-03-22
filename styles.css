@@ -149,27 +149,22 @@ li {
 }
 
 .photos {
-    z-index: -1;
     margin: 2em;
-    /* display: none; */
     display: flex;
     flex-direction: column;
     transition: all 1s 2s ease;
 }
 
 #announcement:checked~.photos {
-    /* display: flex; */
     transition: all 1s 2s ease;
 }
 
 #announcement:checked~.photos>img {
     visibility: visible;
-    opacity: 100;
     transition: all 1s 3s ease;
 }
 
 .photos>img {
-    opacity: 0;
     visibility: hidden;
     object-fit: contain;
     max-width: 40vw;
