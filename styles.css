@@ -48,6 +48,7 @@ li {
 #announcement:checked+.envelope:hover {
     animation: none;
 }
+
 .top-side {
     border-bottom: 150px solid #e8bc1b;
     top: -150px;
@@ -152,6 +153,7 @@ li {
     margin: 2em 2em 30vh 2em;
     display: flex;
     flex-direction: column;
+    align-items: center;
     transition: all 1s 2s ease;
 }
 
@@ -168,7 +170,7 @@ li {
 .photos>img {
     opacity: 0;
     visibility: hidden;
-    object-fit: contain;
+    object-fit: cover;
     max-width: 40vw;
     max-height: 70vh;
     background-color: white;
@@ -180,10 +182,12 @@ li {
 }
 
 .photos img:nth-child(1) {
+    max-width: 20vw;
     rotate: 10deg;
 }
 
 .photos img:nth-child(2) {
+    max-width: 20vw;
     rotate: -5deg;
 }
 
