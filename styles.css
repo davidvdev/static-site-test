@@ -66,11 +66,16 @@ a {
 .update {
     background-image: linear-gradient(to bottom, #6cb5fa, #e69bcc);
     min-height: 60vh;
-    /* padding: 20vh 0 20vh 0; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    transition: all 1s ease;
+    overflow: hidden;
+}
+
+.update:has(#announcement:checked) {
+    overflow: scroll;
 }
 
 .envelope {
@@ -81,6 +86,7 @@ a {
     background: #e8bc1b;
     cursor: pointer;
     transition: all 1s ease;
+    /* box-shadow: black .5em .5em .5em; */
 
 }
 
@@ -90,8 +96,8 @@ a {
     transform-origin: bottom;
     z-index: 6;
     transform: rotateX(180deg);
-    transition: all 0.8s ease;
-    transition-delay: 0.6s;
+    transition: all 0.8s 0.6s ease;
+    /* transition-delay: 0.6s; */
 }
 
 .envelope .bottom-side {
@@ -152,6 +158,7 @@ a {
 }
 
 #announcement:checked~.envelope {
+    box-shadow: black .5em .5em .5em;
     transform: scale(1.1);
     transition: all 1s ease;
 }
@@ -182,4 +189,53 @@ a {
 #announcement:checked~.details {
     opacity: 100;
     transition: all 1s 1.5s ease;
+}
+
+.photos {
+    margin: 2em;
+    /* display: none; */
+    display: flex;
+    flex-direction: column;
+    transition: all 1s 2s ease;
+}
+
+#announcement:checked~.photos {
+    /* display: flex; */
+    transition: all 1s 2s ease;
+}
+
+#announcement:checked~.photos>img {
+    visibility: visible;
+    opacity: 100;
+    transition: all 1s 3s ease;
+}
+
+.photos>img {
+    opacity: 0;
+    visibility: hidden;
+    object-fit: contain;
+    max-width: 40vw;
+    max-height: 70vh;
+    background-color: white;
+    border: 2em solid white;
+    border-radius: 1%;
+    margin: 1em;
+    box-shadow: black .5em .5em .5em;
+    transition: all 1s 3s ease;
+}
+
+.photos img:nth-child(1) {
+    rotate: 10deg;
+}
+
+.photos img:nth-child(2) {
+    rotate: -5deg;
+}
+
+.photos img:nth-child(3) {
+    rotate: 12deg;
+}
+
+.photos img:nth-child(4) {
+    rotate: -8deg;
 }
