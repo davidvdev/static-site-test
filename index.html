@@ -4,40 +4,31 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Bird House</title>
+    <title>Updates</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='main.js'></script>
+    <script src="main.js"></script>
 </head>
 
-<body>
-    <div class="aboveGround">
-        <h1>Welcome to the Vogel House</h1>
-        <img src="assets/family-house.svg" />
-        <!-- insert an image of our house -->
-    </div>
-    <div class="belowGround">
-        <h2>this is where all the cool shit is</h2>
-        <div class="services">
-            <ul>
-                <a href="./update.html">
-                    <li>Updates</li>
-                </a>
-                <a href="https://underthebirdhouse.com/library">
-                    <li>Our Library</li>
-                </a>
-            </ul>
+<body class="update">
+    <input type="checkbox" id="announcement" />
+    <label class="envelope btn btn-warning" for="announcement" onclick="toggleConfetti();">
+        <div class="top-side"></div>
+        <div class="left-side"></div>
+        <div class="contents">
+            <p>We're having a girl!</p>
         </div>
+        <div class="right-side"></div>
+        <div class="bottom-side"></div>
+    </label>
+    <p class="details">The Vogel Family grows by one October 2024</p>
+    <p class="details">🧔🏻‍♂️ 👩🏻 👶🏻 🐱 🐱</p>
+    <div class="photos">
+        <img src="assets/rhubarb-baby.webp" />
+        <img src="assets/tulip-baby.webp" />
+        <img src="assets/ultrasound.webp" />
+        <img src="assets/us.webp" />
     </div>
-    <div class="bedrock">
-        <!-- Leaving this out until we both have websites or something -->
-        <!-- <h3>REAL Internet Places</h3>
-        <ul>
-            <a href="https://www.davidvdev.com"><li>David</li></a>
-            <a><li>Tara</li></a>
-        </ul> -->
-    </div>
-
 </body>
 
 </html>
