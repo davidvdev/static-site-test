@@ -192,6 +192,7 @@ a {
 }
 
 .photos {
+    z-index: -1;
     margin: 2em;
     /* display: none; */
     display: flex;

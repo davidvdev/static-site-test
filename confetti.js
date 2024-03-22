@@ -1,5 +1,5 @@
-var maxParticleCount = 250; //set max confetti count
-var particleSpeed = 3; //set the particle animation speed
+var maxParticleCount = 350; //set max confetti count
+var particleSpeed = 4; //set the particle animation speed
 var startConfetti; //call to start confetti animation
 var stopConfetti; //call to stop adding confetti
 var toggleConfetti; //call to start or stop the confetti animation depending on whether it's already running
@@ -35,7 +35,7 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 
 	function startConfettiInner() {
 		var width = window.innerWidth;
-		var height = window.innerHeight;
+		var height = document.documentElement.scrollHeight;
 		window.requestAnimFrame = (function () {
 			return window.requestAnimationFrame ||
 				window.webkitRequestAnimationFrame ||
@@ -56,7 +56,7 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 			canvas.height = height;
 			window.addEventListener("resize", function () {
 				canvas.width = window.innerWidth;
-				canvas.height = window.innerHeight;
+				canvas.height = document.documentElement.scrollHeight;
 			}, true);
 		}
 		var context = canvas.getContext("2d");
@@ -65,7 +65,7 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 		streamingConfetti = true;
 		if (animationTimer === null) {
 			(function runAnimation() {
-				context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+				context.clearRect(0, 0, window.innerWidth, document.documentElement.scrollHeight);
 				if (particles.length === 0)
 					animationTimer = null;
 				else {
@@ -110,7 +110,7 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 
 	function updateParticles() {
 		var width = window.innerWidth;
-		var height = window.innerHeight;
+		var height = document.documentElement.scrollHeight;
 		var particle;
 		waveAngle += 0.01;
 		for (var i = 0; i < particles.length; i++) {
