@@ -199,6 +199,10 @@ li {
     rotate: -8deg;
 }
 
+.photos img:nth-child(5) {
+    rotate: 8deg;
+}
+
 .photos img:hover {
     animation: wiggle 3s infinite;
 }
